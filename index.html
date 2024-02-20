@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <Script src="./script.js" defer></Script>
+    <title>Tip Caculation</title>
+</head>
+<body>
+    <img class="logo" src="./images/logo.svg" alt="logo">
+
+    <div class="main">
+        <section class="calculation">
+            <form class="bill">
+                <label class="label" for="bill">Bill</label>
+                <img class="dolar" src="./images/icon-dollar.svg" alt="$">
+                <input id="bill" type="number" placeholder="0.00">
+            </form>
+            
+            <h2 class="label label1">Select Tip %</h2>
+            <div class="seleqt-tip">
+                <button class="tip">5%</button>
+                <button class="tip">10%</button>
+                <button class="tip">15%</button>
+                <button class="tip">25%</button>
+                <button class="tip">50%</button>
+                <input id="inputTip" type="number" placeholder="Custom">
+            </div>
+            <form class="number-of-people">
+                <label class="label" for="number-of-people">Number of people</label>
+                <img class="person" src="./images/icon-person.svg" alt="person">
+                <input id="people" type="number" placeholder="0">
+                </form>            
+        </section>
+            
+        <section class="result">
+            <div class="amount">
+                <p>Tip Amount <br> <span>/ person</span></p>
+                <h2>$<span id="tip-amount"></span></h2>
+            </div>
+
+            <div class="total">
+                <p>total <br> <span>/ person</span></p>
+                <h2>$<span id="total-amount"></span></h2>
+            </div>
+
+            <button class="reset">RESET</button>
+        </section>
+
+
+    </div>
+</body>
+</html>
