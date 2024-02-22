@@ -39,7 +39,7 @@ tipValue = parseInt(event.target.innerText);
 button.style.color = "#00474b";
 button.style.backgroundColor = "#9fe8df"
 active = button
-console.log(button)
+custom.value = "";
 tipAmaount()
 
    } else if (active != event){
@@ -52,6 +52,7 @@ tipAmaount()
     button.style.backgroundColor = "#9fe8df"
 
     active = button
+    custom.value = "";
     tipAmaount()
 
    } else { 
@@ -60,6 +61,7 @@ tipAmaount()
     button.style.color = "#00474b";
     button.style.backgroundColor = "#9fe8df"
     active = null
+    custom.value = "";
     tipAmaount()
    }
     })
