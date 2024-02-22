@@ -26,12 +26,22 @@ custom.addEventListener("input", (event) => {
 bill.addEventListener("input", (event) => {
   
     billValue = Number(event.target.value)
-    event.preventDefault()
     // console.log (typeof billValue)
     tipAmaount()
 })
 
 
+
+//     button.addEventListener("click", (event)=>{
+
+//         tip.forEach((button)=>{
+//             button.style.color = "#fff";
+//             button.style.backgroundColor = "#00474b";
+
+//         button.style.color = "#00474b";
+//         button.style.backgroundColor = "#9fe8df"
+// })
+// })
 
 tip.forEach((button)=>{ 
     active = null 

@@ -16,15 +16,14 @@
 
 body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;    
     gap: 40.9px;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     background-color: #c5e4e7;
     min-width: 375px;
-    /* height: 100vh; */
-    
-    
+    height: 100vh;
+    justify-content: center;
+    align-items: center;    
 }
 .logo {
     text-align: center;
@@ -208,7 +207,7 @@ input:hover {
 
 @media screen and (min-width: 1440px) {
     body {
-        padding: 163px 260px 239px;
+        /* padding: 163px 260px 239px; */
         gap: 87.8px;
     }
     .main {
