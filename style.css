@@ -15,6 +15,9 @@ body {
     padding-top: 50px;
     background-color: #c5e4e7;
     min-width: 375px;
+    /* height: 100vh; */
+    
+    
 }
 .logo {
     text-align: center;
@@ -27,8 +30,8 @@ body {
     box-shadow: 0 32px 43px 0 rgba(79, 166, 175, 0.2);
     padding: 32px;
     background-color: #ffffff;
-    margin-bottom: 100%;
-    overflow:hidden;
+    overflow: hidden;
+    /* height: 100vh;    */
 }
 .calculation {
     display: flex;
@@ -45,22 +48,26 @@ body {
   margin-top: 16px;
 }
 
-.label1 {
-    margin-top: 32px;
+.label1, .number-of-people {
+    margin-top: 60px;
 }
 
-.bill, .seleqt-tip, .number-of-people {
-    width: 311px;
-    display: flex;
-    flex-direction: column;
+.people-div, .bill-div {
     position: relative;
 }
 
-.number-of-people {
-    margin-top: 32px;
+
+
+.bill, .people {
+    width: 311px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 25px;  
 }
 
 .seleqt-tip {
+    position: relative;
     display: grid;
     grid-template-columns: 146.6px 146.6px;
     grid-template-rows: 48px 48px;
@@ -84,7 +91,7 @@ body {
     color: #00474b;
 }
 
-.input-tip:hover, .bill input:hover {
+#inputTip:hover, .bill-amount input:hover {
     border: solid 2px #26c2ae;
     cursor: pointer;
 }
@@ -95,19 +102,21 @@ body {
     width: 9.8px;
     height: 15.5px;
     position: absolute;
-    margin: 54px 0 0 19.3px;
+    left: 20px;
+    top: 15px;
 }
 .person {
     width: 13px;
     height: 16px;
     position: absolute;
-    margin: 54px 0 0 19.3px;
+    left: 20px;
+    top: 15px
 }
 
 input {
     padding-right: 17.5px;
     text-align: right;
-    color: #f3f9fa;
+    color: #00474b;
     font-size: 24px;
     font-weight: bold;
     background-color: #f3f9fa;
@@ -116,7 +125,7 @@ input {
      margin-top: 6px;
 }
 
-.input-tip {
+#inputTip {
     text-align: center;
     border-radius: 5px;
     background-color: #f3f9fa;
@@ -202,9 +211,7 @@ input:hover {
       gap: 130px;
     }
 
-    .label1, number-of-people {
-        margin-top: 40px;
-    }
+   
 
     .seleqt-tip {
         display: grid;

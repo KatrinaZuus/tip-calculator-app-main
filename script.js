@@ -12,11 +12,11 @@ const custom = document.getElementById("inputTip")
 let billValue = 0
 let tipValue = 0
 let peopleInput = 0
-let customInput = 0
 
 
 custom.addEventListener("input", (event) => {
     tipValue = Number(event.target.value)
+    tipAmaount()
 })
 
 bill.addEventListener("input", (event) => {
@@ -30,14 +30,46 @@ bill.addEventListener("input", (event) => {
 
 
 tip.forEach((button)=>{ 
-   
+    active = null 
     
 button.addEventListener("click", (event)=>{
-tipValue = parseInt(event.target.innerText)
-// console.log(tipValue)
+    if (active == null) {
+tipValue = parseInt(event.target.innerText);
+
+button.style.color = "#00474b";
+button.style.backgroundColor = "#9fe8df"
+active = button
+console.log(button)
+tipAmaount()
+
+   } else if (active != event){
+    
+    tipValue = parseInt(event.target.innerText);
+    active.style.color = "#fff";
+    active.style.backgroundColor = "#00474b";
+
+    button.style.color = "#00474b";
+    button.style.backgroundColor = "#9fe8df"
+
+    active = button
+    tipAmaount()
+
+   } else { 
+
+    tipValue = parseInt(event.target.innerText);
+    button.style.color = "#00474b";
+    button.style.backgroundColor = "#9fe8df"
+    active = null
+    tipAmaount()
+   }
+    })
 
 })
-})
+    
+
+
+
+
 
 
 
@@ -69,12 +101,24 @@ function tipAmaount(){
 
 resetButton[0].addEventListener("click", ()=>{
 
+    billValue = 0
+    tipValue = 0
+    peopleInput = 0
+
     tipAmount.innerText = "0.00";
     totalAmount.innerText = "0.00";
+   
 
     bill.value = "";
     people.value = "";
-    tipValue.value = "";
+    custom.value = "";
+
+    tip.forEach ((btn)=>{
+    btn.style.color = "#fff";
+    btn.style.backgroundColor = "#00474b";
+
+
+})
 })
 
 
