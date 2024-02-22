@@ -15,7 +15,11 @@ let peopleInput = 0
 
 
 custom.addEventListener("input", (event) => {
-    tipValue = Number(event.target.value)
+    tipValue = Number(event.target.value);
+    tip.forEach((btn)=>{
+    btn.style.color = "#fff";
+    btn.style.backgroundColor = "#00474b";
+    })
     tipAmaount()
 })
 
